@@ -65,3 +65,11 @@
   }, 2200);
   el.style.transition = 'opacity .25s ease';
 })();
+(function () {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 500) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+})();
