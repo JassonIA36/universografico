@@ -347,24 +347,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!form) return;
 
-    // Función para construir el texto estructurado de la cotización para WhatsApp
+    // Función para construir el texto estructurado de la solicitud para WhatsApp
     const buildWhatsAppMessage = () => {
       const name = form.querySelector('[name="name"]')?.value.trim() || 'No especificado';
       const phone = form.querySelector('[name="phone"]')?.value.trim() || 'No especificado';
       const email = form.querySelector('[name="email"]')?.value.trim() || 'No especificado';
       const service = form.querySelector('[name="service"]')?.value || 'General';
       const plan = form.querySelector('[name="plan"]')?.value || 'Por definir';
-      const message = form.querySelector('[name="message"]')?.value.trim() || 'Deseo cotizar un proyecto a la medida.';
+      const message = form.querySelector('[name="message"]')?.value.trim() || 'Deseo solicitar un proyecto a la medida.';
 
-      return `🚀 *NUEVA COTIZACIÓN — UNIVERSO GRÁFICO*
+      return `📋 *NUEVA SOLICITUD DE PROYECTO — UNIVERSO GRÁFICO*
 ━━━━━━━━━━━━━━━━━━━━━━
 👤 *Nombre:* ${name}
 📱 *Teléfono/WhatsApp:* ${phone}
 ✉️ *Email:* ${email}
 🎯 *Servicio de interés:* ${service}
-💼 *Plan / Presupuesto:* ${plan}
+💼 *Plan estimado:* ${plan}
 ━━━━━━━━━━━━━━━━━━━━━━
-📝 *Detalle del proyecto:*
+📝 *Detalle de la solicitud:*
 "${message}"`;
     };
 
@@ -394,10 +394,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Feedback visual inmediato
       feedback.className = 'form-feedback success';
       feedback.innerHTML = `
-        <strong>🚀 ¡Propuesta lista, ${name || 'amigo/a'}!</strong><br>
-        Abriendo WhatsApp para que envíes tu mensaje a Jason al instante...<br>
+        <strong>✨ ¡Solicitud enviada, ${name || 'amigo/a'}!</strong><br>
+        Conectando con WhatsApp para que recibas respuesta de Jason al instante...<br>
         <a href="${waUrl}" target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top: 10px; width: 100%; display: inline-flex;">
-          👉 Toca aquí si no se abrió automáticamente
+          💬 Abrir conversación en WhatsApp
         </a>
       `;
       feedback.style.display = 'block';
