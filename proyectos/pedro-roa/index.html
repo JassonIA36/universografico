@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Pedro Roa - Servicio Técnico Especializado &amp; Alta Ingeniería</title>
+  <meta name="description" content="Especialista en computación de escritorio, portátiles, optimización para gaming/workstations, sistemas de impresión corporativos y soporte remoto inmediato."/>
+  <meta name="google-site-verification" content="ma6vcR9GbZT9sEGYslggxtk1oNrjwc28c1keLYDhthA" />
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <!-- Fuentes: display=swap para no bloquear el render -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/></noscript>
+  <!-- Material Icons: carga diferida -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/></noscript>
+  <!-- Favicon para Google Search y Navegadores (Múltiplos de 48px según Google Central) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png"/>
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <!-- External Separated Stylesheet -->
+  <link href="css/styles.css" rel="stylesheet"/>
+  <link href="css/responsive.css" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "on-secondary-fixed-variant": "#8c0053",
+            "outline-variant": "#4d4354",
+            "on-primary": "#490080",
+            "on-primary-container": "#400071",
+            "primary-container": "#b76dff",
+            "on-secondary": "#640039",
+            "background": "#131318",
+            "error-container": "#93000a",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "on-surface": "#e4e1e9",
+            "primary-fixed": "#f0dbff",
+            "secondary-fixed": "#ffd9e4",
+            "surface-container-highest": "#35343a",
+            "primary": "#ddb7ff",
+            "on-primary-fixed": "#2c0051",
+            "on-tertiary-container": "#002f38",
+            "on-tertiary": "#003640",
+            "on-tertiary-fixed": "#001f26",
+            "tertiary": "#4cd7f6",
+            "primary-fixed-dim": "#ddb7ff",
+            "secondary-fixed-dim": "#ffb0cd",
+            "on-error": "#690005",
+            "tertiary-fixed": "#acedff",
+            "on-error-container": "#ffdad6",
+            "secondary": "#ffb0cd",
+            "outline": "#988d9f",
+            "inverse-on-surface": "#303035",
+            "surface-dim": "#131318",
+            "on-secondary-container": "#ffbad3",
+            "on-primary-fixed-variant": "#6900b3",
+            "on-surface-variant": "#cfc2d6",
+            "surface-container": "#1f1f24",
+            "inverse-primary": "#842bd2",
+            "on-background": "#e4e1e9",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "on-secondary-fixed": "#3e0022",
+            "surface": "#131318",
+            "surface-container-lowest": "#0e0e13",
+            "tertiary-container": "#009eb9",
+            "surface-tint": "#ddb7ff",
+            "surface-bright": "#39393e",
+            "surface-variant": "#35343a",
+            "surface-container-high": "#2a292f",
+            "secondary-container": "#aa0266",
+            "surface-container-low": "#1b1b20",
+            "inverse-surface": "#e4e1e9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin-lg": "4rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "gutter-lg": "2rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "margin-sm": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Space Grotesk"],
+            "body-sm": ["Geist"],
+            "body-lg": ["Geist"],
+            "label-lg": ["JetBrains Mono"],
+            "headline-md": ["Space Grotesk"],
+            "code-snippet": ["JetBrains Mono"],
+            "label-sm": ["JetBrains Mono"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-xl": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "label-md": ["JetBrains Mono"],
+            "body-md": ["Geist"],
+            "headline-lg-mobile": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-snippet": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+
+  <!-- HEADER NAVBAR -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 lg:h-20 w-full px-4 lg:px-gutter-lg flex items-center justify-between gap-space-sm">
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-space-sm shrink-0 group">
+        <img alt="Pedro Roa Logo" class="h-8 w-8 object-contain transition-transform group-hover:scale-105" src="assets/logo.png" width="32" height="32" fetchpriority="high"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none group-hover:text-primary transition-colors">PEDRO ROA</span>
+          <span class="hidden sm:block font-label-sm text-label-sm text-primary uppercase tracking-widest mt-space-xs">Servicio Técnico Especializado</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (visible en laptops ≥1024px) -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <a class="px-3 py-1.5 bg-surface-container-high text-primary font-bold rounded-lg transition-all whitespace-nowrap text-xs tracking-wide" href="index.html">Inicio</a>
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="servicios-tecnicos.html">Servicios Técnicos</a>
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="computadoras-gpu.html">Computadoras &amp; GPU</a>
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="impresoras-soporte-remoto.html">Impresoras &amp; Soporte</a>
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="software-perifericos.html">Software &amp; Periféricos</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-space-sm shrink-0">
+        <a class="hidden xl:flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="tel:+573024555428">
+          <span class="material-symbols-outlined text-[18px] text-tertiary">call</span>
+          <span>+57 302 4555428</span>
+        </a>
+        <a class="inline-flex items-center gap-space-xs px-space-sm py-space-xs lg:px-space-md lg:py-space-sm rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold shadow-[0_0_16px_rgba(170,2,102,0.4)] hover:brightness-110 hover:scale-105 transition-all uppercase tracking-wider" href="https://wa.me/573024555428" aria-label="Cotizar por WhatsApp" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span class="hidden sm:inline">Cotizar</span>
+        </a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden w-10 h-10 inline-flex items-center justify-center text-on-surface hover:text-primary rounded-lg bg-surface-container">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden w-full bg-surface-container-high/95 backdrop-blur-2xl border-b border-outline-variant/20 px-4 py-space-md flex-col gap-space-xs animate-fade-in-up">
+      <a class="px-space-md py-space-sm bg-surface-container-highest text-primary font-bold rounded-lg flex items-center justify-between" href="index.html">
+        <span>Inicio</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="servicios-tecnicos.html">
+        <span>Servicios Técnicos &amp; Upgrades</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="computadoras-gpu.html">
+        <span>Computadoras &amp; GPU</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="impresoras-soporte-remoto.html">
+        <span>Impresoras &amp; Soporte Remoto</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="software-perifericos.html">
+        <span>Software &amp; Periféricos</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <div class="mt-space-sm pt-space-md border-t border-white/5 grid grid-cols-2 gap-space-sm">
+        <a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md" href="tel:+573024555428">
+          <span class="material-symbols-outlined text-[18px] text-tertiary">call</span>
+          <span>Llamar</span>
+        </a>
+        <a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-16 lg:pt-20 bg-background flex-grow">
+    <div class="flex flex-col w-full">
+
+      <!-- HERO MASTER SECTION -->
+      <section class="relative w-full overflow-hidden bg-surface-container-lowest -mt-20 pt-28 pb-margin-lg px-gutter-lg animate-fade-in-up">
+        <!-- Atmospheric Cyber Gradients & Radial Light Traces -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+        <div class="absolute top-1/3 -right-24 w-[30rem] h-[30rem] bg-secondary-container/15 rounded-full blur-[100px] pointer-events-none animate-pulse-glow"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(183,109,255,0.08),rgba(19,19,24,0))] pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto flex flex-col gap-space-xl">
+          <!-- Telemetry Status Ribbon -->
+          <div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md">
+            <div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high/70 backdrop-blur-md border border-white/5">
+              <span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary -ml-3"></span>
+              <span class="font-label-sm text-label-sm text-tertiary font-bold tracking-widest uppercase">LABORATORIO ACTIVO</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-space-md font-code-snippet text-code-snippet text-outline">
+              <span>LAT: 4.7110° N</span>
+              <span class="text-surface-container-highest">|</span>
+              <span class="text-primary-fixed-dim">PROTOCOL: DIRECT_DISPATCH</span>
+            </div>
+          </div>
+
+          <!-- Main Headline & Subtitle Block -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-end">
+            <div class="lg:col-span-8 flex flex-col gap-space-md">
+              <span class="font-label-md text-label-md text-primary uppercase tracking-widest font-semibold flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span> Pedro Roa · Alta Ingeniería Informática
+              </span>
+              <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight uppercase leading-none font-bold">
+                Ingeniería, <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary">Mantenimiento</span> &amp; Potencia para tus Equipos
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed mt-space-xs">
+                Especialista en computación de escritorio, portátiles, optimización para gaming/workstations, sistemas de impresión corporativos y soporte remoto inmediato.
+              </p>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm w-full">
+              <a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-xl shadow-primary/20 hover:brightness-110 hover:shadow-primary/40 hover:scale-[1.02] transition-all uppercase tracking-wider" href="#divisiones">
+                <span class="material-symbols-outlined text-[20px]">explore</span>
+                <span>Explorar Servicios</span>
+              </a>
+              <a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-xl bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-semibold shadow-lg shadow-secondary-container/20 hover:brightness-110 hover:scale-[1.02] transition-all uppercase tracking-wider" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>WhatsApp (+57 302 4555428)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Metric HUD Cards Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-md">
+            <div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container/60 backdrop-blur-sm shadow-md border border-white/5 hover-card-lift">
+              <div class="flex items-center justify-between text-primary">
+                <span class="material-symbols-outlined text-[22px]">history_edu</span>
+                <span class="font-code-snippet text-code-snippet text-outline">EXP_INDEX</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">+10 Años</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">De Experiencia Continua</span>
+            </div>
+            <div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container/60 backdrop-blur-sm shadow-md border border-white/5 hover-card-lift">
+              <div class="flex items-center justify-between text-tertiary">
+                <span class="material-symbols-outlined text-[22px]">tune</span>
+                <span class="font-code-snippet text-code-snippet text-outline">DIAG_PRECISION</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">100% Preciso</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Diagnóstico Electrónico</span>
+            </div>
+            <div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container/60 backdrop-blur-sm shadow-md border border-white/5 hover-card-lift">
+              <div class="flex items-center justify-between text-secondary">
+                <span class="material-symbols-outlined text-[22px]">verified</span>
+                <span class="font-code-snippet text-code-snippet text-outline">HARDWARE_PASS</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Garantía</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Técnica Certificada</span>
+            </div>
+            <div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container/60 backdrop-blur-sm shadow-md border border-white/5 hover-card-lift">
+              <div class="flex items-center justify-between text-primary-container">
+                <span class="material-symbols-outlined text-[22px]">cell_tower</span>
+                <span class="font-code-snippet text-code-snippet text-outline">REMOTE_SYNC</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Inmediato</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Soporte AnyDesk En Vivo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORY CARDS / PORTAL HUBS -->
+      <section class="w-full py-margin px-gutter-lg max-w-7xl mx-auto flex flex-col gap-space-xl" id="divisiones">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+          <div class="flex flex-col gap-space-xs max-w-2xl">
+            <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest font-semibold flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-[16px]">apps</span> Divisiones de Soporte Técnico
+            </span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+              Soluciones de Grado Industrial &amp; Usuario Avanzado
+            </h2>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+            Accede directamente a los módulos de intervención especializada, ensamblado crítico o soporte remoto cifrado.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
+          <!-- Card 1 -->
+          <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-2xl hover-card-lift border border-white/5 group">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <span class="font-code-snippet text-code-snippet text-primary px-space-sm py-space-xs rounded bg-surface-container-highest">DIV_01 // HARDWARE</span>
+                <span class="material-symbols-outlined text-primary text-[28px] group-hover:rotate-12 transition-transform duration-300">build</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Servicios Técnicos &amp; Upgrades
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Mantenimiento físico preventivo y correctivo, cambio de pasta térmica de alta conductividad, ampliación ultra-rápida de memorias RAM, SSDs NVMe y calibración de fuentes de poder.
+              </p>
+            </div>
+            <div class="mt-space-lg pt-space-md flex items-center justify-between border-t border-white/5">
+              <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary font-bold group-hover:gap-space-md transition-all uppercase tracking-wider" href="servicios-tecnicos.html#upgrades-modulo">
+                <span>Ver Servicios Técnicos</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <span class="font-code-snippet text-code-snippet text-outline">PC &amp; LAPTOPS</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-2xl hover-card-lift border border-white/5 group">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <span class="font-code-snippet text-code-snippet text-secondary px-space-sm py-space-xs rounded bg-surface-container-highest">DIV_02 // PERFORMANCE</span>
+                <span class="material-symbols-outlined text-secondary text-[28px] group-hover:scale-110 transition-transform duration-300">memory</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                Computadoras a Medida &amp; Tarjetas Gráficas
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Ensambles corporativos robustos, estaciones de trabajo (Workstations) para renderizado y rigs de Gaming extremo. Venta consultiva y balance térmico de tarjetas gráficas Nvidia RTX y AMD Radeon.
+              </p>
+            </div>
+            <div class="mt-space-lg pt-space-md flex items-center justify-between border-t border-white/5">
+              <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary font-bold group-hover:gap-space-md transition-all uppercase tracking-wider" href="computadoras-gpu.html">
+                <span>Ver Ensambles &amp; GPUs</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <span class="font-code-snippet text-code-snippet text-outline">CUSTOM RIGS</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-2xl hover-card-lift border border-white/5 group">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <span class="font-code-snippet text-code-snippet text-tertiary px-space-sm py-space-xs rounded bg-surface-container-highest">DIV_03 // PRINT &amp; CLOUD</span>
+                <span class="material-symbols-outlined text-tertiary text-[28px] group-hover:scale-110 transition-transform duration-300">print</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-tertiary transition-colors">
+                Sistemas de Impresión &amp; Soporte Remoto
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Reparación de sistemas de tinta continua (EcoTank), desatasco de cabezales, reseteo de almohadillas, mantenimiento láser e intervención inmediata por software vía AnyDesk a nivel nacional.
+              </p>
+            </div>
+            <div class="mt-space-lg pt-space-md flex items-center justify-between border-t border-white/5">
+              <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-tertiary font-bold group-hover:gap-space-md transition-all uppercase tracking-wider" href="impresoras-soporte-remoto.html">
+                <span>Ver Impresoras &amp; Remoto</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <span class="font-code-snippet text-code-snippet text-outline">ANYDESK READY</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-2xl hover-card-lift border border-white/5 group">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <span class="font-code-snippet text-code-snippet text-primary-fixed-dim px-space-sm py-space-xs rounded bg-surface-container-highest">DIV_04 // ECOSYSTEM</span>
+                <span class="material-symbols-outlined text-primary-fixed-dim text-[28px] group-hover:scale-110 transition-transform duration-300">keyboard</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary-fixed-dim transition-colors">
+                Licenciamiento &amp; Periféricos
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Software certificado: licenciamiento OEM y Retail de Windows 11 Pro, Office 365, suites de diseño técnico, y el mejor ecosistema de periféricos: teclados mecánicos, ratones gamer y diademas de alta definición.
+              </p>
+            </div>
+            <div class="mt-space-lg pt-space-md flex items-center justify-between border-t border-white/5">
+              <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary-fixed-dim font-bold group-hover:gap-space-md transition-all uppercase tracking-wider" href="software-perifericos.html">
+                <span>Ver Software &amp; Periféricos</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <span class="font-code-snippet text-code-snippet text-outline">ORIGINAL AUTH</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWCASE VISUAL SECTION -->
+      <section class="w-full py-space-xl bg-surface-container-low mb-margin-lg">
+        <div class="max-w-7xl mx-auto px-gutter-lg">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl bg-surface-container-lowest border border-white/5">
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+              <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-[480px] w-full overflow-hidden">
+                <img alt="Ensamble Custom PC Gaming & Workstation Pedro Roa" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" src="assets/custom-pc-build.jpg" loading="lazy" width="800" height="480"/>
+                <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-surface-container-lowest via-transparent to-transparent"></div>
+              </div>
+              <div class="lg:col-span-5 p-space-lg lg:p-space-xl flex flex-col gap-space-md z-10">
+                <div class="inline-flex items-center gap-space-xs">
+                  <span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+                  <span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest">INGENIERÍA VISUAL Y TÉRMICA</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight">
+                  Precisión Milimétrica en Cada Ensamble
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Cada ensamble y mantenimiento pasa por una rigurosa calibración termo-dinámica. No dejamos cables sueltos ni disipadores descompensados: garantizamos flujo de aire positivo, mínima sonoridad y máxima durabilidad de silicio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER FINAL DE CONTACTO DIRECTO -->
+      <section class="w-full px-gutter-lg pb-margin-lg">
+        <div class="max-w-7xl mx-auto rounded-xl bg-surface-container-high p-space-lg md:p-space-xl shadow-2xl relative overflow-hidden border border-white/5">
+          <div class="absolute -right-16 -bottom-16 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+          <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+            <div class="flex flex-col gap-space-sm max-w-2xl text-center lg:text-left">
+              <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest font-bold">¿Tu equipo presenta fallas o necesitas una asesoría técnica?</span>
+              <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+                Habla directamente con Pedro Roa
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Atención personalizada para profesionales, gamers y empresas. Diagnóstico honesto, presupuesto claro y resolución garantizada.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-space-md shrink-0 w-full sm:w-auto">
+              <a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-xl bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow-xl shadow-secondary-container/30 hover:brightness-110 hover:scale-105 transition-all uppercase tracking-wider" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[22px]">chat</span>
+                <span>WhatsApp (+57 302 4555428)</span>
+              </a>
+              <a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-xl bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-bright transition-all uppercase tracking-wider" href="tel:+573024555428">
+                <span class="material-symbols-outlined text-[20px] text-tertiary">call</span>
+                <span>Llamada Directa</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest text-on-surface border-t border-white/5">
+    <div class="w-full px-gutter-lg py-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg pb-margin-sm">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <img alt="Pedro Roa Logo" class="h-8 w-8 object-contain" src="assets/logo.png" loading="lazy" width="32" height="32"/>
+            <span class="font-headline-sm text-headline-sm text-on-surface">PEDRO ROA</span>
+          </div>
+          <span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Servicio Técnico Especializado</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Laboratorio técnico de alta precisión. Mantenimiento avanzado de PC y Laptops, micro-electrónica, ensambles de alto rendimiento y soporte remoto integral.</p>
+        </div>
+
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-primary">Secciones</span>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="index.html">Inicio &amp; Resumen</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="servicios-tecnicos.html">Mantenimiento PC &amp; Laptops</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="computadoras-gpu.html">Ensambles &amp; Tarjetas Gráficas</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="impresoras-soporte-remoto.html">Impresoras &amp; AnyDesk</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="software-perifericos.html">Licencias &amp; Periféricos</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-primary">Contacto &amp; Soporte</span>
+          <div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+            <a class="flex items-center gap-space-xs text-on-surface-variant hover:text-tertiary transition-colors" href="tel:+573024555428">
+              <span class="material-symbols-outlined text-[18px] text-tertiary">call</span>
+              <span>+57 302 4555428</span>
+            </a>
+            <a class="flex items-center gap-space-xs text-on-surface-variant hover:text-tertiary transition-colors" href="mailto:pedroroae@gmail.com">
+              <span class="material-symbols-outlined text-[18px] text-tertiary">mail</span>
+              <span>pedroroae@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-primary">Atención Directa</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Diagnóstico preliminar y asesoría inmediata en ensambles o contingencias técnicas.</p>
+          <a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[18px] text-primary">send</span>
+            <span>Canal WhatsApp Técnico</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant border-t border-white/5">
+        <p>© 2025 Pedro Roa - Especialista en Hardware &amp; Diagnóstico Computacional.</p>
+        <p class="font-code-snippet text-code-snippet text-outline">STATUS: ONLINE // SYS_OK</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Separated Script -->
+  <script src="js/main.js"></script>
+  <script src="js/mobile-nav.js"></script>
+</body>
+</html>

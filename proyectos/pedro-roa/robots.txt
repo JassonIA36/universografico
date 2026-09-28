@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /favicon.ico
+
+# Permitir que Googlebot-Image rastree los favicons
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/

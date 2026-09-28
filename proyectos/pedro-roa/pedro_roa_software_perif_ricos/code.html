@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed-variant":"#8c0053","outline-variant":"#4d4354","on-primary":"#490080","on-primary-container":"#400071","primary-container":"#b76dff","on-secondary":"#640039","background":"#131318","error-container":"#93000a","error":"#ffb4ab","on-tertiary-fixed-variant":"#004e5c","on-surface":"#e4e1e9","primary-fixed":"#f0dbff","secondary-fixed":"#ffd9e4","surface-container-highest":"#35343a","primary":"#ddb7ff","on-primary-fixed":"#2c0051","on-tertiary-container":"#002f38","on-tertiary":"#003640","on-tertiary-fixed":"#001f26","tertiary":"#4cd7f6","primary-fixed-dim":"#ddb7ff","secondary-fixed-dim":"#ffb0cd","on-error":"#690005","tertiary-fixed":"#acedff","on-error-container":"#ffdad6","secondary":"#ffb0cd","outline":"#988d9f","inverse-on-surface":"#303035","surface-dim":"#131318","on-secondary-container":"#ffbad3","on-primary-fixed-variant":"#6900b3","on-surface-variant":"#cfc2d6","surface-container":"#1f1f24","inverse-primary":"#842bd2","on-background":"#e4e1e9","tertiary-fixed-dim":"#4cd7f6","on-secondary-fixed":"#3e0022","surface":"#131318","surface-container-lowest":"#0e0e13","tertiary-container":"#009eb9","surface-tint":"#ddb7ff","surface-bright":"#39393e","surface-variant":"#35343a","surface-container-high":"#2a292f","secondary-container":"#aa0266","surface-container-low":"#1b1b20","inverse-surface":"#e4e1e9"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-lg":"4rem","gutter":"1.5rem","gutter-sm":"1rem","gutter-lg":"2rem","space-xl":"2.5rem","space-md":"1rem","margin-sm":"1rem","space-xs":"0.25rem"},"fontFamily":{"headline-xl-mobile":["Space Grotesk"],"body-sm":["Geist"],"body-lg":["Geist"],"label-lg":["JetBrains Mono"],"headline-md":["Space Grotesk"],"code-snippet":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"headline-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"],"label-md":["JetBrains Mono"],"body-md":["Geist"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"headline-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-snippet":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"headline-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Pedro Roa Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XHwQnhCDkvuG6fWuLSlFnuJvDdCpn857zDK6mL85rDOKK0qli53mRZPZobu46OsMEl054ndbMqcsPMbmeWRVgglG_UPTfwwUefY4X0DU5WOODmJguGKR5-q5cGvLGjiPBVb3bW7Pz7Sri6GzmEFKYOOVOODae4_2BR88fAYH5DJ8u5HQESAfdREyTJ5WYrm0l0aQjcUfGRo3WQQPm3Nwln-NJsTW28Xwb5meHMXuJfj711yz05X7HPjQ0"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">PEDRO ROA</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mt-space-xs">Servicio Técnico Especializado</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded transition-colors whitespace-nowrap" data-path="inicio" href="#">Inicio</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded transition-colors whitespace-nowrap" data-path="servicios-tecnicos-upgrades" href="#">Servicios Técnicos &amp; Upgrades</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded transition-colors whitespace-nowrap" data-path="computadoras-gpu" href="#">Computadoras &amp; GPU</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded transition-colors whitespace-nowrap" data-path="impresoras-soporte-remoto" href="#">Impresoras &amp; Soporte Remoto</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded transition-colors whitespace-nowrap" data-path="software-perifericos" href="#">Software &amp; Periféricos</a></nav><div class="flex items-center gap-space-md shrink-0"><a class="hidden sm:flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="tel:+573024555428"><span class="material-symbols-outlined text-[18px] text-tertiary">call</span><span>+57 302 4555428</span></a><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold shadow-[0_0_16px_rgba(170,2,102,0.4)] hover:brightness-110 transition-all uppercase tracking-wider" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="hidden md:inline">Cotizar</span> WhatsApp</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- ==================== HERO SECTION ==================== -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest px-gutter-lg py-margin-lg">
+<!-- Atmospheric Cyber Glows -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 -right-40 w-[30rem] h-[30rem] rounded-full bg-secondary-container/15 blur-[140px] pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<!-- Left Hero Column -->
+<div class="flex-1 flex flex-col items-start gap-space-md">
+<!-- Technical Telemetry Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high border-0 shadow-sm">
+<span class="h-2 w-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">CATÁLOGO DE SOFTWARE Y EQUIPAMIENTO OFICIAL</span>
+<span class="font-code-snippet text-code-snippet text-outline-variant">:: SYS_CERT_2025</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none">
+          Licenciamiento <span class="text-primary">Genuino</span>, Periféricos &amp; Hardware
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Activaciones oficiales con garantía permanente vinculada a placa madre, suites de ingeniería y arquitectura, junto con equipamiento ergonómico y periféricos de grado competitivo calibrados a nivel de driver y micro-controlador.
+        </p>
+<!-- CTA Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-semibold shadow-[0_0_24px_rgba(183,109,255,0.45)] hover:brightness-110 hover:scale-[1.02] transition-all" href="https://wa.me/573024555428?text=Hola%20Pedro,%20deseo%20cotizar%20licencias%20o%20perif%C3%A9ricos" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span>Consultar Licencias / Hardware</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl bg-surface-container-high text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-wider transition-all" href="#catalogo-hardware">
+<span class="material-symbols-outlined text-[18px]">developer_board</span>
+<span>Ver Catálogo Completo</span>
+</a>
+</div>
+<!-- Telemetry Metadata Bar -->
+<div class="grid grid-cols-3 gap-space-md pt-space-md w-full border-t-0">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary">100%</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Garantía Digital OEM/Retail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary">0.05ms</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Latencia Polling Rate</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">+1500</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Equipos Certificados</span>
+</div>
+</div>
+</div>
+<!-- Right Hardware Diagnostic Visualizer -->
+<div class="flex-1 w-full max-w-xl relative">
+<div class="relative w-full h-[420px] rounded-xl overflow-hidden bg-surface-container shadow-2xl">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" data-alt="Modern close up shot of high performance computer motherboard illuminated by neon violet and fuchsia purple LED glow with technician in anti-static black nitrile gloves installing an NVMe SSD drive with precision screwdriver, high tech laboratory environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeHmCUPzrHZSOoqk1zj8tHkYx64TN3x8dKnfIumR1C6CNW4hp_vaUAP-zslmQZiyHQsr_5fJ6w7rdFzdM63S0a8bFZwIh1sSvoP1qCCqTWiAUqQJDEkYQn0ApjocWox7-qQa931oKkifNXqzl3XXiJDmIIfJ6w1ZHp5ccbmypbiR5McVHT5oB1hoGAC03UCKheeLO1lsrlZs3cKQdWGEHDGNv1PffaWhtZ2E6DHlMDFwlLWbyxEL0D"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface-container/60 to-transparent"></div>
+<!-- Floating Interactive HUD Telemetry Card -->
+<div class="absolute bottom-space-md left-space-md right-space-md p-space-md rounded-xl bg-surface/90 backdrop-blur-xl shadow-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">memory</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">VALIDACIÓN FIRMWARE // HWID</span>
+<span class="font-code-snippet text-code-snippet text-tertiary">TPM 2.0 :: SECURE BOOT OK</span>
+</div>
+</div>
+<span class="px-space-sm py-space-xs rounded bg-surface-container-highest font-label-sm text-label-sm text-primary uppercase">ACTIVO</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECCIÓN 1: LICENCIAMIENTO & ACTIVACIONES ==================== -->
+<section class="w-full bg-surface-container-low px-gutter-lg py-margin-lg">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-snippet text-code-snippet text-primary">[MOD_01 :: LEGAL_SOFTWARE]</span>
+<span class="w-12 h-[2px] bg-primary/40"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Licenciamiento de Software &amp; Activaciones Oficiales
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Entregamos certificados digitales genuinos respaldados por servidores de activación oficial. Compatibilidad garantizada, actualización continua de seguridad y migración limpia sin pérdida de licencias.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container font-label-sm text-label-sm text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>SIN CRACKS NI ACTIVADORES RIESGOSOS</span>
+</div>
+</div>
+<!-- 4 Bento Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Tarjeta A: Sistemas Operativos -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high transition-all group shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">terminal</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-code-snippet text-code-snippet text-outline">SYS_OS // WIN_MAC</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sistemas Operativos</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Licencias perpetuas OEM / Retail para estaciones de trabajo y entornos servidores.
+            </p>
+<ul class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Windows 10 Pro &amp; Windows 11 Pro 64-bit genuino.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Windows Server (Standard &amp; Datacenter).</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Instalación limpia y preservación de HWID en BIOS.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md border-t-0 flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-tertiary">PERMANENTE</span>
+<a class="text-primary hover:text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs" href="https://wa.me/573024555428?text=Consulta%20por%20Licencia%20Windows">
+              Solicitar <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Tarjeta B: Ofimática & Productividad -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high transition-all group shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[26px]">cloud_sync</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-code-snippet text-code-snippet text-outline">OFFICE_SUITE // CLOUD</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Productividad &amp; Cloud</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Herramientas de colaboración integradas con protección contra pérdida de información.
+            </p>
+<ul class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary shrink-0 mt-0.5">check_circle</span>
+<span>Microsoft 365 Personal, Familia y Corporativo.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary shrink-0 mt-0.5">check_circle</span>
+<span>Word, Excel, PowerPoint, Outlook y Teams.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary shrink-0 mt-0.5">check_circle</span>
+<span>1TB OneDrive por usuario con respaldo automatizado.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md border-t-0 flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-tertiary">MULTIDISPOSITIVO</span>
+<a class="text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs" href="https://wa.me/573024555428?text=Consulta%20por%20Microsoft%20365">
+              Solicitar <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Tarjeta C: Ciberseguridad & Antivirus -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high transition-all group shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[26px]">security</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-code-snippet text-code-snippet text-outline">EDR // DEFENSE_OPS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ciberseguridad</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Escudos perimetrales activos sin penalizar el rendimiento del procesador ni FPS.
+            </p>
+<ul class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span>ESET NOD32, Kaspersky y Bitdefender Total Security.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span>Bloqueo perimetral de Ransomware, Phishing y Spyware.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span>Protección bancaria de cifrado en navegadores.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md border-t-0 flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-secondary">TIEMPO REAL</span>
+<a class="text-secondary hover:text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs" href="https://wa.me/573024555428?text=Consulta%20por%20Antivirus%20y%20Seguridad">
+              Solicitar <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Tarjeta D: Software Profesional y de Diseño -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high transition-all group shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[26px]">architecture</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-code-snippet text-code-snippet text-outline">ENGINEERING // CAD_3D</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Diseño &amp; Cálculo</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Instalación técnica configurada con aceleración por GPU CUDA/OpenCL calibrada.
+            </p>
+<ul class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>AutoCAD, Revit, SolidWorks y SketchUp Pro.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Adobe Suite: Photoshop, Illustrator, Premiere y After Effects.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Configuración de motores de render V-Ray / Lumion / Blender.</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md border-t-0 flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-primary">GPU ACCEL</span>
+<a class="text-primary hover:text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs" href="https://wa.me/573024555428?text=Consulta%20por%20Software%20de%20Diseno%20y%20Arquitectura">
+              Solicitar <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECCIÓN 2: PERIFÉRICOS & ACCESORIOS ==================== -->
+<section class="w-full bg-surface px-gutter-lg py-margin-lg" id="catalogo-hardware">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Title & Narrative -->
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-snippet text-code-snippet text-secondary">[MOD_02 :: PERIPHERAL_LINEUP]</span>
+<span class="w-12 h-[2px] bg-secondary/40"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Periféricos &amp; Accesorios de Alto Rendimiento
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Hardware evaluado rigurosamente en nuestro laboratorio de ensamble: tolerancia mecánica, switches de alta durabilidad y fidelidad acústica certificada.
+        </p>
+</div>
+<!-- 3 Columns Modular Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+<!-- Tarjeta 1: Ergonomía & Productividad -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+<div class="h-56 relative w-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Modern ergonomic home office workstation setup with curved ultra wide monitor, low profile quiet mechanical keyboard, vertical ergonomic mouse, monitor arm mount and USB type C aluminum hub dock in clean dark room with subtle violet backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzHCyumvENp-jn4LccwthUGlKpZsivopdXLZGVw3Xs3qipV4wpND2WL5MIXWUZ96TlVU0trQaiPm64ofn9seDqLaUHe5y36PGeyYNGPHjLkoG6DVda7Yqf5hsRRlX_NNIgf0JLs2RuR8HygFU9JT-wKYVKG5s5ER_foYIimdNmT8c7UAjzuFaHl01lE44y749mcCIc6jUd0l_pgC2b8Fy80npVExf8SGrRAA1t9zqjPdoBt8Wc_-uo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-space-md left-space-md px-space-sm py-space-xs rounded bg-surface/80 backdrop-blur-md font-label-sm text-label-sm text-tertiary">
+              OFFICE &amp; HOME WORK
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Productividad &amp; Ergonomía</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Diseñados para mitigar la fatiga articular por túnel carpiano en jornadas extensas de oficina o desarrollo.
+              </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">keyboard</span>
+<span>Teclados y mouses silenciosos de bajo impacto.</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">dock</span>
+<span>Hubs USB-C multifunción, DisplayPort 1.4 y RJ45 Gigabit.</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">aspect_ratio</span>
+<span>Brazos hidráulicos VESA y soportes con elevación de gas.</span>
+</div>
+</div>
+</div>
+<a class="w-full py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-center font-label-md text-label-md uppercase tracking-wider transition-colors" href="https://wa.me/573024555428?text=Cotizar%20Perifericos%20Ergonomicos">
+              Cotizar Ergonomía
+            </a>
+</div>
+</div>
+<!-- Tarjeta 2: Línea Gamer de Precisión -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+<div class="h-56 relative w-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Extreme esports esports gaming gear on dark obsidian desk with customizable mechanical keyboard displaying purple RGB backlight, lightweight optical gaming mouse with honeycomb chassis, extra large textured cloth mouse pad, hyper dynamic cyberpunk mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi1bZnoFzUdwvPwDqgQQKZqxRPXgfdOEC_PRn0xvh_FMShGlqFiurOmqw1lb8TV7NJUOPaVocorXTtVuk1QTPhGfDVo_XCk3KAAsAtQkvDEgL5vQn-RoNgiWtNkOGuKMPMCnxBIGLzMwrnR6viZBRCvpTi85apQR7m3m6Wn4iEi9lXAQl7GSo9knZYx7rOq7Aolr4OYbJJKHNuvgrdQf6TqYb6-cthCIfK2zLPiucrHQ08w1wrMlTZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-space-md left-space-md px-space-sm py-space-xs rounded bg-surface/80 backdrop-blur-md font-label-sm text-label-sm text-secondary">
+              ESPORTS GRADE
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Línea Gamer Competitiva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Componentes de latencia cero, con polímeros resistentes al desgaste y micro-switches de 80 millones de clics.
+              </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">sports_esports</span>
+<span>Teclados mecánicos Red/Brown/Blue con Anti-Ghosting N-Key.</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">mouse</span>
+<span>Mouses con sensores PixArt de alta resolución (hasta 26K DPI).</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">texture</span>
+<span>Mousepads XL / Extended con costuras reforzadas anti-fricción.</span>
+</div>
+</div>
+</div>
+<a class="w-full py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-secondary-container hover:text-on-secondary-container text-center font-label-md text-label-md uppercase tracking-wider transition-colors" href="https://wa.me/573024555428?text=Cotizar%20Perifericos%20Gamer">
+              Cotizar Setup Gamer
+            </a>
+</div>
+</div>
+<!-- Tarjeta 3: Audio & Video Profesional -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+<div class="h-56 relative w-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Professional studio streaming setup with condenser microphone mounted on boom arm with pop filter, studio monitor headphones and 4K webcam positioned atop dark display screen, dark moody violet lighting with crisp highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd2YMW6Ws3Kx17i14epTSv0faLhQGqwY4w3kKftHpHULWI_-8jAPUxa0YCwMxLucJ52kjOSjnglVORuJra8jodo5loATH45WacqALnj50Sqm3SFUBZ62yDhIVb6upfZGpeNA2tRVxG8ybakks_9Utk26suWfZhSTh4jPvs77viEZdWA-I89ZgF9RAGOcsgzszEJtxS9SHZgkl5TSXoLT4UYSUWjpmGwn0O33KDOYQTv9PIXE-L_DFA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-space-md left-space-md px-space-sm py-space-xs rounded bg-surface/80 backdrop-blur-md font-label-sm text-label-sm text-primary">
+              STUDIO &amp; STREAM
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Audio &amp; Video Profesional</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Soluciones para podcasts, streaming en vivo, conferencias remotas y masterización con cancelación de eco.
+              </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">headset_mic</span>
+<span>Headsets con cancelación pasiva/activa y aislamiento acústico.</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">videocam</span>
+<span>Webcams 1080p a 60 FPS y 4K con autoenfoque y sensor low-light.</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">mic</span>
+<span>Micrófonos condensadores cardioides USB con shockmount integrado.</span>
+</div>
+</div>
+</div>
+<a class="w-full py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-center font-label-md text-label-md uppercase tracking-wider transition-colors" href="https://wa.me/573024555428?text=Cotizar%20Audio%20y%20Video">
+              Cotizar Audio / Video
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECCIÓN 3: PROTOCOLO & GARANTÍA TÉCNICA ==================== -->
+<section class="w-full bg-surface-container-low px-gutter-lg py-margin-lg">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-code-snippet text-code-snippet text-primary">[SYS_PROTOCOL :: VERIFICATION_CHAIN]</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Protocolo de Instalación, Configuración &amp; Garantía</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          A diferencia de distribuidores comerciales convencionales, cada producto o licencia es entregada y configurada por un técnico con calibración integral de firmware, firmware updates y respaldos.
+        </p>
+</div>
+<!-- Protocol Step Blocks -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary">01</span>
+<span class="material-symbols-outlined text-primary text-[28px]">biotech</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Test de Compatibilidad</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Verificamos compatibilidad de chipset, versión de BIOS, requisitos de bus PCIe y soporte de drivers WHQL antes de ejecutar cualquier cambio.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-tertiary">02</span>
+<span class="material-symbols-outlined text-tertiary text-[28px]">download_for_offline</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Calibración &amp; Drivers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ajuste de firmware nativo en periféricos, asignación de perfiles DPI en memoria integrada, curva de ecualización y aceleración por GPU.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-secondary">03</span>
+<span class="material-symbols-outlined text-secondary text-[28px]">workspace_premium</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Garantía Directa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Garantía técnica por reemplazo inmediato en caso de falla de fábrica, con migración de perfiles y soporte remoto AnyDesk asistido.
+          </p>
+</div>
+</div>
+<!-- Technical Telemetry Interactive Bar -->
+<div class="p-space-md rounded-xl bg-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-[32px]">sync_alt</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">MIGRACIÓN DE CLAVES &amp; TRANSFERENCIA DE DATOS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">¿Renovaste tu máquina? Traspasamos tus licencias vinculadas y correos sin riesgo de bloqueo.</span>
+</div>
+</div>
+<a class="px-space-md py-space-sm rounded-lg bg-surface text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-wider shrink-0 transition-colors" href="https://wa.me/573024555428?text=Necesito%20migrar%20licencias%20o%20datos">
+          Consultar Migración
+        </a>
+</div>
+</div>
+</section>
+<!-- ==================== BANNER FINAL DE CONVERSIÓN ==================== -->
+<section class="w-full bg-gradient-to-b from-surface-container-low to-surface-container-lowest px-gutter-lg py-margin-lg">
+<div class="max-w-5xl mx-auto rounded-xl bg-surface-container p-space-xl shadow-2xl relative overflow-hidden flex flex-col items-center text-center gap-space-md">
+<!-- Glow Accent -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-gradient-to-r from-primary/20 via-secondary/20 to-tertiary/20 blur-3xl pointer-events-none"></div>
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high">
+<span class="h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">ASISTENCIA DIRECTA DISPONIBLE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface max-w-2xl tracking-tight">
+        ¿Necesitas una licencia específica o asesoría técnica en periféricos?
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Escríbeme indicando las especificaciones de tu máquina o el software requerido. Te brindo cotización al instante con respaldo y activación garantizada.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-xl py-space-md rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase font-bold shadow-[0_0_24px_rgba(170,2,102,0.5)] hover:brightness-110 hover:scale-105 transition-all" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>WhatsApp: +57 302 4555428</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-md rounded-xl bg-surface-container-high text-on-surface hover:text-tertiary font-label-md text-label-md uppercase transition-colors" href="tel:+573024555428">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Llamada Directa</span>
+</a>
+</div>
+<div class="flex items-center gap-space-md pt-space-sm font-code-snippet text-code-snippet text-outline-variant">
+<span>LOC: COLOMBIA &amp; GLOBAL REMOTO</span>
+<span>::</span>
+<span>ATENCIÓN TÉCNICA INMEDIATA</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for telemetry feedback
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface mt-margin-lg"><div class="w-full px-gutter-lg py-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg pb-margin-sm"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Pedro Roa Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XHwQnhCDkvuG6fWuLSlFnuJvDdCpn857zDK6mL85rDOKK0qli53mRZPZobu46OsMEl054ndbMqcsPMbmeWRVgglG_UPTfwwUefY4X0DU5WOODmJguGKR5-q5cGvLGjiPBVb3bW7Pz7Sri6GzmEFKYOOVOODae4_2BR88fAYH5DJ8u5HQESAfdREyTJ5WYrm0l0aQjcUfGRo3WQQPm3Nwln-NJsTW28Xwb5meHMXuJfj711yz05X7HPjQ0"/><span class="font-headline-sm text-headline-sm text-on-surface">PEDRO ROA</span></div><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Servicio Técnico Especializado</span><p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Laboratorio técnico de alta precisión. Mantenimiento avanzado de PC y Laptops, micro-electrónica, ensambles de alto rendimiento y soporte remoto integral.</p><div class="flex items-center gap-space-xs mt-space-xs"><span class="h-2 w-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary">SISTEMA TÉCNICO ACTIVO</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Secciones</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span><a data-path="inicio" href="#">Inicio &amp; Resumen</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span><a data-path="servicios-tecnicos-upgrades" href="#">Servicios Técnicos &amp; Upgrades</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span><a data-path="computadoras-gpu" href="#">Ensambles &amp; Tarjetas Gráficas</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span><a data-path="impresoras-soporte-remoto" href="#">Impresoras &amp; AnyDesk</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span><a data-path="software-perifericos" href="#">Licencias &amp; Periféricos</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Contacto &amp; Soporte</span><div class="flex flex-col gap-space-sm font-body-sm text-body-sm"><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-tertiary transition-colors" href="tel:+573024555428"><span class="material-symbols-outlined text-[18px] text-tertiary">call</span><span>+57 302 4555428</span></a><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-tertiary transition-colors" href="mailto:pedroroae@gmail.com"><span class="material-symbols-outlined text-[18px] text-tertiary">mail</span><span>pedroroae@gmail.com</span></a><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-primary">desktop_windows</span><span>Soporte Remoto AnyDesk Directo</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-secondary">location_on</span><span>Colombia &amp; Asistencia Global</span></div></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Atención Directa</span><p class="font-body-sm text-body-sm text-on-surface-variant">Diagnóstico preliminar y asesoría inmediata en ensambles o contingencias técnicas.</p><a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px] text-primary">send</span><span>Canal WhatsApp Técnico</span></a></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><p>© 2025 Pedro Roa - Especialista en Hardware &amp; Diagnóstico Computacional.</p><p class="font-code-snippet text-code-snippet text-outline">STATUS: ONLINE // SYS_OK</p></div></div></footer></body></html>

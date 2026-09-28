@@ -1,0 +1,22 @@
+{
+  "name": "pedro-roa-website",
+  "version": "1.0.0",
+  "description": "Pedro Roa - Servicio Técnico Especializado Web Application",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "pedro-roa",
+    "hardware",
+    "mantenimiento",
+    "gpu",
+    "soporte-remoto"
+  ],
+  "author": "Pedro Roa",
+  "license": "MIT",
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

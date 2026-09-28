@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Pedro Roa - Servicios Técnicos &amp; Upgrades Especializados</title>
+  <meta name="description" content="Servicio Técnico Especializado en PC de Escritorio y Portátiles. Mantenimiento físico preventivo, correctivo y repotenciación."/>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/></noscript>
+  <!-- Favicon para Google Search y Navegadores (Múltiplos de 48px según Google Central) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png"/>
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  
+  <!-- External Stylesheet -->
+  <link href="css/styles.css" rel="stylesheet"/>
+  <link href="css/responsive.css" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "on-secondary-fixed-variant": "#8c0053",
+            "outline-variant": "#4d4354",
+            "on-primary": "#490080",
+            "on-primary-container": "#400071",
+            "primary-container": "#b76dff",
+            "on-secondary": "#640039",
+            "background": "#131318",
+            "error-container": "#93000a",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "on-surface": "#e4e1e9",
+            "primary-fixed": "#f0dbff",
+            "secondary-fixed": "#ffd9e4",
+            "surface-container-highest": "#35343a",
+            "primary": "#ddb7ff",
+            "on-primary-fixed": "#2c0051",
+            "on-tertiary-container": "#002f38",
+            "on-tertiary": "#003640",
+            "on-tertiary-fixed": "#001f26",
+            "tertiary": "#4cd7f6",
+            "primary-fixed-dim": "#ddb7ff",
+            "secondary-fixed-dim": "#ffb0cd",
+            "on-error": "#690005",
+            "tertiary-fixed": "#acedff",
+            "on-error-container": "#ffdad6",
+            "secondary": "#ffb0cd",
+            "outline": "#988d9f",
+            "inverse-on-surface": "#303035",
+            "surface-dim": "#131318",
+            "on-secondary-container": "#ffbad3",
+            "on-primary-fixed-variant": "#6900b3",
+            "on-surface-variant": "#cfc2d6",
+            "surface-container": "#1f1f24",
+            "inverse-primary": "#842bd2",
+            "on-background": "#e4e1e9",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "on-secondary-fixed": "#3e0022",
+            "surface": "#131318",
+            "surface-container-lowest": "#0e0e13",
+            "tertiary-container": "#009eb9",
+            "surface-tint": "#ddb7ff",
+            "surface-bright": "#39393e",
+            "surface-variant": "#35343a",
+            "surface-container-high": "#2a292f",
+            "secondary-container": "#aa0266",
+            "surface-container-low": "#1b1b20",
+            "inverse-surface": "#e4e1e9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin-lg": "4rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "gutter-lg": "2rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "margin-sm": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Space Grotesk"],
+            "body-sm": ["Geist"],
+            "body-lg": ["Geist"],
+            "label-lg": ["JetBrains Mono"],
+            "headline-md": ["Space Grotesk"],
+            "code-snippet": ["JetBrains Mono"],
+            "label-sm": ["JetBrains Mono"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-xl": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "label-md": ["JetBrains Mono"],
+            "body-md": ["Geist"],
+            "headline-lg-mobile": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-snippet": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+
+  <!-- HEADER NAVBAR -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 lg:h-20 w-full px-4 lg:px-gutter-lg flex items-center justify-between gap-space-sm">
+      <a href="index.html" class="flex items-center gap-space-md shrink-0 group">
+        <img alt="Pedro Roa Logo" class="h-8 w-8 object-contain transition-transform group-hover:scale-105" src="assets/logo.png" width="32" height="32" fetchpriority="high"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none group-hover:text-primary transition-colors">PEDRO ROA</span>
+          <span class="hidden sm:block font-label-sm text-label-sm text-primary uppercase tracking-widest mt-space-xs">Servicio Técnico Especializado</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1">
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="index.html">Inicio</a>
+        <a class="px-3 py-1.5 bg-surface-container-high text-primary font-bold rounded-lg transition-all whitespace-nowrap text-xs tracking-wide" href="servicios-tecnicos.html">Servicios Técnicos</a>
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="computadoras-gpu.html">Computadoras &amp; GPU</a>
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="impresoras-soporte-remoto.html">Impresoras &amp; Soporte Remoto</a>
+        <a class="text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 px-3 py-1.5 rounded transition-all whitespace-nowrap" href="software-perifericos.html">Software &amp; Periféricos</a>
+      </nav>
+
+      <div class="flex items-center gap-space-md shrink-0">
+        <a class="hidden xl:flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="tel:+573024555428">
+          <span class="material-symbols-outlined text-[18px] text-tertiary">call</span>
+          <span>+57 302 4555428</span>
+        </a>
+        <a class="inline-flex items-center gap-space-xs px-space-sm py-space-xs lg:px-space-md lg:py-space-sm rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold shadow-[0_0_16px_rgba(170,2,102,0.4)] hover:brightness-110 hover:scale-105 transition-all uppercase tracking-wider" href="https://wa.me/573024555428" aria-label="Cotizar por WhatsApp" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span class="hidden md:inline">Cotizar</span> <span class="hidden sm:inline">WhatsApp</span>
+        </a>
+
+        <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden w-10 h-10 inline-flex items-center justify-center text-on-surface hover:text-primary rounded-lg bg-surface-container">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden w-full bg-surface-container-high/95 backdrop-blur-2xl border-b border-outline-variant/20 px-4 sm:px-gutter-lg py-space-md flex-col gap-space-xs animate-fade-in-up">
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="index.html">
+        <span>Inicio</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm bg-surface-container-highest text-primary font-bold rounded-lg flex items-center justify-between" href="servicios-tecnicos.html">
+        <span>Servicios Técnicos &amp; Upgrades</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="computadoras-gpu.html">
+        <span>Computadoras &amp; GPU</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="impresoras-soporte-remoto.html">
+        <span>Impresoras &amp; Soporte Remoto</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between transition-colors" href="software-perifericos.html">
+        <span>Software &amp; Periféricos</span>
+        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+      </a>
+      <div class="mt-space-sm pt-space-md border-t border-white/5 grid grid-cols-2 gap-space-sm">
+        <a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md" href="tel:+573024555428">
+          <span class="material-symbols-outlined text-[18px] text-tertiary">call</span>
+          <span>Llamar</span>
+        </a>
+        <a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-16 lg:pt-20 bg-background flex-grow">
+    <div class="flex flex-col w-full">
+
+      <!-- SECTION HEADER & TELEMETRY RIBBON -->
+      <section class="relative w-full px-gutter-lg py-margin-lg overflow-hidden bg-surface-container-lowest animate-fade-in-up">
+        <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none animate-pulse-glow"></div>
+        <div class="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full bg-secondary-container/15 blur-[120px] pointer-events-none animate-pulse-glow"></div>
+        
+        <div class="max-w-7xl mx-auto flex flex-col gap-space-lg relative z-10">
+          <div class="flex flex-wrap items-center gap-space-sm">
+            <span class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm tracking-widest uppercase border border-white/5">
+              <span class="h-2 w-2 rounded-full bg-tertiary animate-ping"></span>
+              LABORATORIO_HARDWARE // PROTOCOLO_ST-2025
+            </span>
+            <span class="text-outline-variant font-label-sm text-label-sm">|</span>
+            <span class="font-code-snippet text-code-snippet text-on-surface-variant">DIAG_ID: PEDRO-ROA-LAB-COL</span>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter-lg">
+            <div class="flex flex-col gap-space-sm max-w-3xl">
+              <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight font-bold">
+                Servicio Técnico Especializado en <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary">PC de Escritorio y Portátiles</span>
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Prevención, limpieza profunda y optimización para prolongar la vida útil de tu inversión tecnológica con instrumental de grado industrial.
+              </p>
+            </div>
+
+            <!-- Telemetry Key Metrics HUD -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-space-md bg-surface-container p-space-md rounded-xl shadow-xl shrink-0 border border-white/5 hover-card-lift">
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Térmico Delta</span>
+                <span class="font-headline-sm text-headline-sm text-tertiary font-bold">-18°C ~ -25°C</span>
+                <span class="font-code-snippet text-code-snippet text-on-surface-variant">Disipación Óptima</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Tiempo Lectura</span>
+                <span class="font-headline-sm text-headline-sm text-primary font-bold">~3.500 MB/s</span>
+                <span class="font-code-snippet text-code-snippet text-on-surface-variant">NVMe Gen3/4/5</span>
+              </div>
+              <div class="flex flex-col col-span-2 sm:col-span-1">
+                <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Tasa Retención</span>
+                <span class="font-headline-sm text-headline-sm text-secondary font-bold">99.8%</span>
+                <span class="font-code-snippet text-code-snippet text-on-surface-variant">Cero Reincidencia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 TIPOS DE MANTENIMIENTO -->
+      <section class="w-full px-gutter-lg py-space-xl bg-background">
+        <div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-space-xs">// MODALIDADES_DE_SERVICIO</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Arquitectura de Mantenimiento</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Diagnósticos estandarizados bajo métricas de stress testing, termografía y depuración de micro-instrucciones.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+            <div class="flex flex-col justify-between bg-surface-container p-space-lg rounded-xl shadow-md transition-all duration-300 hover-card-lift border border-white/5 relative overflow-hidden group">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-primary font-semibold tracking-wider uppercase">NIVEL 01 // PREVENTIVO</span>
+                  <div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">mode_fan</span>
+                  </div>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Mantenimiento Físico Preventivo</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Intervención microscópica de módulos térmicos y electromecánicos para erradicar degradación por estrés térmico.
+                </p>
+                <ul class="flex flex-col gap-space-sm mt-space-xs font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">cleaning_services</span>
+                    <span><strong class="font-semibold text-on-surface">Limpieza química profunda:</strong> Baño por ultrasonido y solventes dieléctricos no corrosivos para chasis y PCB.</span>
+                  </li>
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">settings</span>
+                    <span><strong class="font-semibold text-on-surface">Desensamble minucioso:</strong> Extracción de turbinas, radiadores y lubricación de rodamientos de ventiladores.</span>
+                  </li>
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">thermostat</span>
+                    <span><strong class="font-semibold text-on-surface">Compuesto térmico premium:</strong> Aplicación de pastas con conductividad superior (Arctic MX-4/6, Noctua NT-H2 o Thermal Grizzly Kryonaut).</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-space-lg pt-space-md bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between font-label-sm text-label-sm border-t border-white/5">
+                <span class="text-on-surface-variant">RECOMENDADO:</span>
+                <span class="text-tertiary font-bold">CADA 6 - 8 MESES</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-between bg-surface-container p-space-lg rounded-xl shadow-md transition-all duration-300 hover-card-lift border border-white/5 relative overflow-hidden group">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-tertiary to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-tertiary font-semibold tracking-wider uppercase">NIVEL 02 // SOFTWARE &amp; OS</span>
+                  <div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">terminal</span>
+                  </div>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Mantenimiento Lógico &amp; SO</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Reestructuración de servicios del núcleo, higiene de almacenamiento y blindaje perimetral del sistema.
+                </p>
+                <ul class="flex flex-col gap-space-sm mt-space-xs font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">speed</span>
+                    <span><strong class="font-semibold text-on-surface">Aceleración de arranque:</strong> Depuración de servicios huérfanos, bloatware y telemetría de fondo no esencial.</span>
+                  </li>
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">security</span>
+                    <span><strong class="font-semibold text-on-surface">Extracción de malware:</strong> Análisis heurístico contra Rootkits, Troyanos y secuestradores de recursos en segundo plano.</span>
+                  </li>
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">tune</span>
+                    <span><strong class="font-semibold text-on-surface">Alineación de registros:</strong> Corrección de librerías DLL corruptas, parches de seguridad e indexación de sector SSD/HDD.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-space-lg pt-space-md bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between font-label-sm text-label-sm border-t border-white/5">
+                <span class="text-on-surface-variant">IMPACTO EN RESPUESTA:</span>
+                <span class="text-primary font-bold">+35% VELOCIDAD SO</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-between bg-surface-container p-space-lg rounded-xl shadow-md transition-all duration-300 hover-card-lift border border-white/5 relative overflow-hidden group">
+              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary font-semibold tracking-wider uppercase">NIVEL 03 // CRÍTICO</span>
+                  <div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+                  </div>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Diagnóstico &amp; Reparación Correctiva</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Resolución de fallas de nivel lógico-eléctrico con osciloscopio, multímetro e interpretación de minidumps.
+                </p>
+                <ul class="flex flex-col gap-space-sm mt-space-xs font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">error_outline</span>
+                    <span><strong class="font-semibold text-on-surface">Pantallas azules (BSOD):</strong> Trazabilidad exacta de errores como KERNEL_DATA_INPAGE, IRQL_NOT_LESS_OR_EQUAL.</span>
+                  </li>
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">restart_alt</span>
+                    <span><strong class="font-semibold text-on-surface">Reinicios y cuelgues:</strong> Corrección de fallos en fases VRM, microfisuras y líneas de alimentación 12V/5V inestables.</span>
+                  </li>
+                  <li class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">swap_horiz</span>
+                    <span><strong class="font-semibold text-on-surface">Reemplazo quirúrgico:</strong> Sustitución de MOSFETs, condensadores, chipsets y periféricos en corto circuito.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-space-lg pt-space-md bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between font-label-sm text-label-sm border-t border-white/5">
+                <span class="text-on-surface-variant">GARANTÍA TÉCNICA:</span>
+                <span class="text-secondary font-bold">100% FUNCIONAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN ESPECIALIZADA DE UPGRADES & REPOTENCIACIÓN -->
+      <section class="w-full px-gutter-lg py-margin-lg bg-surface-container-lowest border-y border-white/5 relative overflow-hidden" id="upgrades-modulo">
+        <div class="absolute -top-32 right-0 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto flex flex-col gap-space-xl relative z-10">
+          
+          <!-- Encabezado de Sección -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-white/5 pb-space-md">
+            <div class="flex flex-col gap-space-xs max-w-2xl">
+              <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest font-bold flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">bolt</span> Módulo de Repotenciación &amp; Hardware Upgrade
+              </span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+                Maximiza la Potencia Real de tu Equipo
+              </h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+              Evaluamos los cuellos de botella exactos de tu sistema y seleccionamos componentes 100% compatibles con garantía de rendimiento comprobable.
+            </p>
+          </div>
+
+          <!-- Grid 4 Componentes de Upgrade -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg">
+            
+            <!-- Upgrade 1: Almacenamiento NVMe -->
+            <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-lg border border-white/5 hover-card-lift relative overflow-hidden group">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[26px]">memory</span>
+                  </div>
+                  <span class="font-code-snippet text-code-snippet text-primary px-space-xs py-0.5 rounded bg-surface-container-high border border-primary/20">+10x VELOCIDAD</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">SSDs NVMe M.2 Gen4/Gen5</h3>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mt-1">Almacenamiento de Ultra-Velocidad</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Lectura ultra-rápida de hasta 7.450 MB/s. Eliminamos la lentitud al encender el sistema o cargar proyectos pesados en Photoshop, Premiere y juegos AAA.
+                </p>
+                <div class="flex flex-col gap-1 pt-2 font-code-snippet text-code-snippet text-on-surface">
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Clonado y Migración OS 1:1</span>
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Disipación Pasiva de Aluminio</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upgrade 2: Memoria RAM -->
+            <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-lg border border-white/5 hover-card-lift relative overflow-hidden group">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+                    <span class="material-symbols-outlined text-[26px]">developer_board</span>
+                  </div>
+                  <span class="font-code-snippet text-code-snippet text-tertiary px-space-xs py-0.5 rounded bg-surface-container-high border border-tertiary/20">MULTITAREA 100%</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Memoria RAM DDR4 / DDR5</h3>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mt-1">Dual &amp; Quad-Channel High-Speed</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Ampliación desde 16GB hasta 128GB a altas frecuencias (3200MHz a 7200MHz) con perfiles XMP 3.0 / EXPO optimizados para trabajo simultáneo.
+                </p>
+                <div class="flex flex-col gap-1 pt-2 font-code-snippet text-code-snippet text-on-surface">
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Verificación MemTest86 0 Errores</span>
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Sincronización Latencias CL</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upgrade 3: Refrigeración y Pasta Térmica -->
+            <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-lg border border-white/5 hover-card-lift relative overflow-hidden group">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+                    <span class="material-symbols-outlined text-[26px]">thermostat</span>
+                  </div>
+                  <span class="font-code-snippet text-code-snippet text-secondary px-space-xs py-0.5 rounded bg-surface-container-high border border-secondary/20">-25°C DELTA</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Soluciones Térmicas AIO</h3>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mt-1">Disipadores &amp; Metal Líquido</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Instalación de refrigeraciones líquidas de 240/360mm o torres por aire Noctua/DeepCool. Eliminamos el estrangulamiento térmico (Thermal Throttling).
+                </p>
+                <div class="flex flex-col gap-1 pt-2 font-code-snippet text-code-snippet text-on-surface">
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Pastas Thermal Grizzly / Noctua</span>
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Curvas de Ventilación Silenciosas</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upgrade 4: Fuente de Poder & GPU -->
+            <div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container shadow-lg border border-white/5 hover-card-lift relative overflow-hidden group">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed-dim group-hover:bg-primary-fixed-dim group-hover:text-on-primary-fixed transition-colors">
+                    <span class="material-symbols-outlined text-[26px]">electric_bolt</span>
+                  </div>
+                  <span class="font-code-snippet text-code-snippet text-primary-fixed-dim px-space-xs py-0.5 rounded bg-surface-container-high border border-primary-fixed-dim/20">80+ GOLD / PLATINUM</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Fuentes de Poder ATX 3.0</h3>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mt-1">Energía Limpia &amp; GPU Modular</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Reemplazo por fuentes modulares de 750W a 1200W con cableado 12VHPWR nativo para alimentar GPUs de alta gama (Nvidia RTX 40/50 series) sin sobrecalentamiento.
+                </p>
+                <div class="flex flex-col gap-1 pt-2 font-code-snippet text-code-snippet text-on-surface">
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Protección OVP/OCP/SCP</span>
+                  <span class="flex items-center gap-1.5"><span class="text-tertiary">✓</span> Cable Management Profesional</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TABLA COMPARATIVA "ANTES vs DESPUÉS DEL UPGRADE" -->
+          <div class="w-full rounded-xl bg-surface-container p-space-lg shadow-xl border border-white/5 flex flex-col gap-space-md">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm border-b border-white/5 pb-space-sm">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-tertiary text-[22px]">analytics</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Matriz de Rendimiento: Antes vs Después del Upgrade</h3>
+              </div>
+              <span class="font-code-snippet text-code-snippet text-outline">TELEMETRÍA REAL EN LABORATORIO</span>
+            </div>
+
+            <div class="overflow-x-auto w-full">
+              <table class="w-full min-w-[640px] text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-white/10 font-label-sm text-label-sm text-on-surface-variant uppercase">
+                    <th class="py-space-xs px-space-sm">Métrica de Evaluación</th>
+                    <th class="py-space-xs px-space-sm text-error font-semibold">Estado Inicial (HDD / Stock)</th>
+                    <th class="py-space-xs px-space-sm text-tertiary font-semibold">Post-Upgrade Pedro Roa</th>
+                    <th class="py-space-xs px-space-sm text-primary font-semibold">Ganancia de Eficiencia</th>
+                  </tr>
+                </thead>
+                <tbody class="font-body-sm text-body-sm divide-y divide-white/5">
+                  <tr>
+                    <td class="py-space-sm px-space-sm font-semibold text-on-surface">Tiempo de Inicio Sistema Operativo</td>
+                    <td class="py-space-sm px-space-sm text-on-surface-variant">60 ~ 90 segundos</td>
+                    <td class="py-space-sm px-space-sm text-tertiary font-semibold">&lt; 8 segundos</td>
+                    <td class="py-space-sm px-space-sm text-primary font-bold">+900% más rápido</td>
+                  </tr>
+                  <tr>
+                    <td class="py-space-sm px-space-sm font-semibold text-on-surface">Temperatura Procesador en Carga Máxima</td>
+                    <td class="py-space-sm px-space-sm text-error">88°C - 95°C (Límite Térmico)</td>
+                    <td class="py-space-sm px-space-sm text-tertiary font-semibold">60°C - 68°C Estables</td>
+                    <td class="py-space-sm px-space-sm text-primary font-bold">-25°C de temperatura</td>
+                  </tr>
+                  <tr>
+                    <td class="py-space-sm px-space-sm font-semibold text-on-surface">Fluidez al abrir Proyectos 4K / 3D</td>
+                    <td class="py-space-sm px-space-sm text-on-surface-variant">Congelamientos frecuentes</td>
+                    <td class="py-space-sm px-space-sm text-tertiary font-semibold">Respuesta inmediata en tiempo real</td>
+                    <td class="py-space-sm px-space-sm text-primary font-bold">Cero estrangulamiento</td>
+                  </tr>
+                  <tr>
+                    <td class="py-space-sm px-space-sm font-semibold text-on-surface">Capacidad Multitarea Activa</td>
+                    <td class="py-space-sm px-space-sm text-on-surface-variant">Límite en 8 - 10 pestañas</td>
+                    <td class="py-space-sm px-space-sm text-tertiary font-semibold">50+ Pestañas + IDE + Render 3D</td>
+                    <td class="py-space-sm px-space-sm text-primary font-bold">Capacidad Ilimitada</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- ILUSTRACIÓN TÉCNICA INTEGRADA CON PROPÓSITO -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center rounded-xl bg-surface-container-high p-space-md border border-white/5">
+            <div class="lg:col-span-6 relative h-64 sm:h-80 w-full rounded-lg overflow-hidden border border-white/10 group">
+              <img alt="Instalación de GPU y componentes en laboratorio técnico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/gpu-hero.jpg" loading="lazy"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 p-space-xs rounded bg-surface/90 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs">
+                <span class="text-tertiary font-label-sm">MONITOREO TÉCNICO // INTERVENCIÓN M.2</span>
+                <span class="text-outline font-code-snippet">LAB_SN: 9021-PR</span>
+              </div>
+            </div>
+            <div class="lg:col-span-6 flex flex-col gap-space-sm p-space-sm">
+              <span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest">// GARANTÍA Y TRANSPARENCIA</span>
+              <h3 class="font-headline-md text-headline-md text-on-surface font-bold">Pruebas de Esfuerzo Previo y Posterior</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Antes de entregar cualquier equipo repotenciado, ejecutamos pruebas de stress en Cinebench, AIDA64 y FurMark durante mínimo 45 minutos. Te entregamos informe térmico comparativo de rendimiento comprobado.
+              </p>
+              <div class="pt-space-xs">
+                <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold uppercase tracking-wider hover:brightness-110 transition-all" href="https://wa.me/573024555428?text=Hola%20Pedro%20Roa,%20deseo%20consultar%20un%20upgrade%20para%20mi%20computador." rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  <span>Consultar Upgrade por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA ACTION BANNER -->
+      <section class="w-full px-gutter-lg py-margin-lg bg-background relative overflow-hidden">
+        <div class="max-w-7xl mx-auto rounded-xl p-space-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low shadow-2xl relative overflow-hidden border border-white/5">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none animate-pulse-glow"></div>
+          <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-space-lg">
+            <div class="flex flex-col gap-space-xs max-w-2xl text-center md:text-left">
+              <span class="inline-flex items-center justify-center md:justify-start gap-space-xs font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">
+                <span class="material-symbols-outlined text-[16px]">support_agent</span>
+                ASISTENCIA DIRECTA CON EL INGENIERO
+              </span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+                ¿Tu equipo necesita mantenimiento o upgrade?
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Recibe asesoría técnica personalizada, diagnóstico sin rodeos y el presupuesto exacto para elevar el rendimiento de tu PC o Laptop.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center gap-space-md shrink-0 w-full sm:w-auto">
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold uppercase tracking-wider shadow-[0_0_24px_rgba(170,2,102,0.4)] hover:brightness-110 hover:scale-105 transition-all" href="https://wa.me/573024555428?text=Hola%20Pedro%20Roa,%20deseo%20cotizar%20un%20servicio%20de%20mantenimiento%20o%20upgrade%20para%20mi%20equipo." rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>Cotiza al +57 302 4555428</span>
+              </a>
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors" href="tel:+573024555428">
+                <span class="material-symbols-outlined text-[20px] text-tertiary">call</span>
+                <span>Llamar Ahora</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest text-on-surface border-t border-white/5">
+    <div class="w-full px-gutter-lg py-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg pb-margin-sm">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <img alt="Pedro Roa Logo" class="h-8 w-8 object-contain" src="assets/logo.png" loading="lazy" width="32" height="32"/>
+            <span class="font-headline-sm text-headline-sm text-on-surface">PEDRO ROA</span>
+          </div>
+          <span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Servicio Técnico Especializado</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Laboratorio técnico de alta precisión. Mantenimiento avanzado de PC y Laptops, micro-electrónica, ensambles de alto rendimiento y soporte remoto integral.</p>
+        </div>
+
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-primary">Secciones</span>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="index.html">Inicio &amp; Resumen</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="servicios-tecnicos.html">Mantenimiento PC &amp; Laptops</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="computadoras-gpu.html">Ensambles &amp; Tarjetas Gráficas</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="impresoras-soporte-remoto.html">Impresoras &amp; AnyDesk</a>
+            </li>
+            <li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[14px] text-primary">arrow_right</span>
+              <a href="software-perifericos.html">Licencias &amp; Periféricos</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-primary">Contacto &amp; Soporte</span>
+          <div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+            <a class="flex items-center gap-space-xs text-on-surface-variant hover:text-tertiary transition-colors" href="tel:+573024555428">
+              <span class="material-symbols-outlined text-[18px] text-tertiary">call</span>
+              <span>+57 302 4555428</span>
+            </a>
+            <a class="flex items-center gap-space-xs text-on-surface-variant hover:text-tertiary transition-colors" href="mailto:pedroroae@gmail.com">
+              <span class="material-symbols-outlined text-[18px] text-tertiary">mail</span>
+              <span>pedroroae@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-primary">Atención Directa</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Diagnóstico preliminar y asesoría inmediata en ensambles o contingencias técnicas.</p>
+          <a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" href="https://wa.me/573024555428" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[18px] text-primary">send</span>
+            <span>Canal WhatsApp Técnico</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant border-t border-white/5">
+        <p>© 2025 Pedro Roa - Especialista en Hardware &amp; Diagnóstico Computacional.</p>
+        <p class="font-code-snippet text-code-snippet text-outline">STATUS: ONLINE // SYS_OK</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Separated Script -->
+  <script src="js/main.js"></script>
+  <script src="js/mobile-nav.js"></script>
+</body>
+</html>
