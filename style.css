@@ -109,23 +109,6 @@ button {
   overflow: hidden;
 }
 
-.bg-dots {
-  position: absolute;
-  inset: -2px;
-  background-image: radial-gradient(circle, rgba(242, 240, 234, 0.14) 1px, transparent 1.3px);
-  background-size: 28px 28px;
-  animation: dotFade 6s ease-in-out infinite;
-}
-
-:root[data-theme="light"] .bg-dots {
-  background-image: radial-gradient(circle, rgba(14, 19, 31, 0.10) 1px, transparent 1.3px);
-}
-
-@keyframes dotFade {
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 0.95; }
-}
-
 .bg-glow span {
   position: absolute;
   border-radius: 50%;
