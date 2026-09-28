@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveLinks();
 
   /* ==========================================================================
-     10. FORMULARIO DE CONTACTO FUNCIONAL CON FORMSPREE & WHATSAPP (MEJORA #2)
+     10. FORMULARIO DE CONTACTO — ENVÍO DIRECTO A WHATSAPP (MEJORA #2)
      ========================================================================== */
   const initContactForm = () => {
     const form = document.getElementById('contactForm');
@@ -347,23 +347,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!form) return;
 
-    // Actualizar enlace directo a WhatsApp con los datos del formulario al escribir
+    // Función para construir el texto estructurado de la cotización para WhatsApp
+    const buildWhatsAppMessage = () => {
+      const name = form.querySelector('[name="name"]')?.value.trim() || 'No especificado';
+      const phone = form.querySelector('[name="phone"]')?.value.trim() || 'No especificado';
+      const email = form.querySelector('[name="email"]')?.value.trim() || 'No especificado';
+      const service = form.querySelector('[name="service"]')?.value || 'General';
+      const plan = form.querySelector('[name="plan"]')?.value || 'Por definir';
+      const message = form.querySelector('[name="message"]')?.value.trim() || 'Deseo cotizar un proyecto a la medida.';
+
+      return `🚀 *NUEVA COTIZACIÓN — UNIVERSO GRÁFICO*
+━━━━━━━━━━━━━━━━━━━━━━
+👤 *Nombre:* ${name}
+📱 *Teléfono/WhatsApp:* ${phone}
+✉️ *Email:* ${email}
+🎯 *Servicio de interés:* ${service}
+💼 *Plan / Presupuesto:* ${plan}
+━━━━━━━━━━━━━━━━━━━━━━
+📝 *Detalle del proyecto:*
+"${message}"`;
+    };
+
+    // Actualizar enlace directo de WhatsApp en tiempo real al escribir
     const updateWhatsAppLink = () => {
       if (!waDirectBtn) return;
-      const name = form.querySelector('[name="name"]')?.value || '';
-      const service = form.querySelector('[name="service"]')?.value || 'Proyecto General';
-      const plan = form.querySelector('[name="plan"]')?.value || 'Por definir';
-      const msg = form.querySelector('[name="message"]')?.value || '';
-
-      const text = `¡Hola Jason! Mi nombre es ${name || '[Mi Nombre]'}. Me interesa cotizar: *${service}* (Plan: ${plan}). ${msg ? 'Detalle: ' + msg : ''}`;
-      waDirectBtn.href = `https://wa.me/573224583276?text=${encodeURIComponent(text)}`;
+      const text = buildWhatsAppMessage();
+      waDirectBtn.href = `https://api.whatsapp.com/send?phone=573224583276&text=${encodeURIComponent(text)}`;
     };
 
     form.addEventListener('input', updateWhatsAppLink);
     updateWhatsAppLink();
 
-    // Procesar envío del formulario vía Formspree / fetch
-    form.addEventListener('submit', async (e) => {
+    // Procesar envío del formulario: Abre WhatsApp con el mensaje estructurado
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       if (!form.checkValidity()) {
@@ -371,56 +387,38 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const originalBtnText = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
-          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
-          <path d="M12 2a10 10 0 0 1 10 10"></path>
-        </svg> Enviando mensaje...
+      const name = form.querySelector('[name="name"]')?.value.trim() || '';
+      const text = buildWhatsAppMessage();
+      const waUrl = `https://api.whatsapp.com/send?phone=573224583276&text=${encodeURIComponent(text)}`;
+
+      // Feedback visual inmediato
+      feedback.className = 'form-feedback success';
+      feedback.innerHTML = `
+        <strong>🚀 ¡Propuesta lista, ${name || 'amigo/a'}!</strong><br>
+        Abriendo WhatsApp para que envíes tu mensaje a Jason al instante...<br>
+        <a href="${waUrl}" target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top: 10px; width: 100%; display: inline-flex;">
+          👉 Toca aquí si no se abrió automáticamente
+        </a>
       `;
+      feedback.style.display = 'block';
 
-      feedback.className = 'form-feedback';
-      feedback.style.display = 'none';
-
-      const formData = new FormData(form);
-
+      // Enviar respaldo en background a Formspree de manera silenciosa
       try {
-        const response = await fetch(form.action, {
+        const formData = new FormData(form);
+        fetch(form.action, {
           method: 'POST',
           body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+          headers: { 'Accept': 'application/json' }
+        }).catch(() => {});
+      } catch (err) {}
 
-        if (response.ok) {
-          feedback.className = 'form-feedback success';
-          feedback.innerHTML = `
-            <strong>✨ ¡Mensaje enviado con éxito!</strong><br>
-            Gracias por escribir. He recibido tus datos y te responderé en menos de 24 horas con una propuesta a la medida.
-          `;
-          feedback.style.display = 'block';
-          form.reset();
-          updateWhatsAppLink();
-        } else {
-          const data = await response.json();
-          throw new Error(data?.error || 'Hubo un inconveniente al enviar.');
-        }
-      } catch (err) {
-        console.warn('Formspree submit fallback:', err);
-        feedback.className = 'form-feedback error';
-        feedback.innerHTML = `
-          <strong>No se pudo enviar automáticamente.</strong><br>
-          Puedes contactarme de inmediato por WhatsApp con un solo clic:
-          <a href="${waDirectBtn ? waDirectBtn.href : 'https://wa.me/573224583276'}" target="_blank" rel="noopener" style="display:inline-block; margin-top:8px; font-weight:bold; color:var(--text); text-decoration:underline;">
-            👉 Enviar propuesta por WhatsApp directo
-          </a>
-        `;
-        feedback.style.display = 'block';
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnText;
+      // Abrir WhatsApp en nueva pestaña
+      const newTab = window.open(waUrl, '_blank');
+      if (!newTab || newTab.closed || typeof newTab.closed === 'undefined') {
+        // Si el navegador bloqueó la ventana emergente, redirige tras 600ms
+        setTimeout(() => {
+          window.location.href = waUrl;
+        }, 600);
       }
     });
   };
