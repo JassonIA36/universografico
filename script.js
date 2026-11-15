@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
       feedback.className = 'form-feedback success';
       feedback.innerHTML = `
         <strong>✨ ¡Solicitud enviada, ${name || 'amigo/a'}!</strong><br>
-        Conectando con WhatsApp para que recibas respuesta de Jason al instante...<br>
+        Conectando con WhatsApp para que recibas respuesta de Jasson al instante...<br>
         <a href="${waUrl}" target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top: 10px; width: 100%; display: inline-flex;">
           💬 Abrir conversación en WhatsApp
         </a>
