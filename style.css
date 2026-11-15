@@ -1842,3 +1842,13 @@ footer {
   .reveal, .reveal-item, .hero-tag, .hero-title, .hero-sub, .hero-actions, .hero-strip { opacity: 1 !important; transform: none !important; }
   .mascot-svg, .orbit-ring { animation: none !important; }
 }
+
+.browser-body.has-shot .shot-link {
+  display: block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.browser-body.has-shot .shot-link:focus-visible {
+  outline: 2px solid var(--accent, #fff);
+  outline-offset: -4px;
+}
