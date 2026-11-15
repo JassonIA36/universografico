@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateWhatsAppLink = () => {
       if (!waDirectBtn) return;
       const text = buildWhatsAppMessage();
-      waDirectBtn.href = `https://api.whatsapp.com/send?phone=573224583276&text=${encodeURIComponent(text)}`;
+      waDirectBtn.href = `https://api.whatsapp.com/send?phone=573164727595&text=${encodeURIComponent(text)}`;
     };
 
     form.addEventListener('input', updateWhatsAppLink);
@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const name = form.querySelector('[name="name"]')?.value.trim() || '';
       const text = buildWhatsAppMessage();
-      const waUrl = `https://api.whatsapp.com/send?phone=573224583276&text=${encodeURIComponent(text)}`;
+      const waUrl = `https://api.whatsapp.com/send?phone=573164727595&text=${encodeURIComponent(text)}`;
 
       // Feedback visual inmediato
       feedback.className = 'form-feedback success';
