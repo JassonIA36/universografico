@@ -1852,3 +1852,14 @@ footer {
   outline: 2px solid var(--accent, #fff);
   outline-offset: -4px;
 }
+
+/* ===== Preguntas frecuentes ===== */
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 20px;transition:border-color .2s ease}
+.faq-item[open]{border-color:var(--line-strong)}
+.faq-item summary{cursor:pointer;list-style:none;padding:18px 28px 18px 0;font-weight:700;font-size:16px;line-height:1.4;position:relative;color:var(--text);-webkit-tap-highlight-color:transparent}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:22px;color:var(--pink);transition:transform .2s ease}
+.faq-item[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq-item p{margin:0 0 18px;color:var(--text-dim);line-height:1.65;font-size:15px}
+@media (prefers-reduced-motion:reduce){.faq-item summary::after{transition:none}}
